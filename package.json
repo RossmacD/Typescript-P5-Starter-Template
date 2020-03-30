@@ -1,0 +1,39 @@
+{
+  "name": "coronavirussim",
+  "version": "1.0.0",
+  "description": "A covid19 simultaion uilt in typescript",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npm run build",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RossmacD/CoronavirusSim.git"
+  },
+  "author": "Ross MacDonald, N00171147",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RossmacD/CoronavirusSim/issues"
+  },
+  "homepage": "https://github.com/RossmacD/CoronavirusSim#readme",
+  "devDependencies": {
+    "@types/node": "13.9.5",
+    "@types/p5": "^0.9.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.0.0",
+    "style-loader": "^1.1.3",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^4.0.3",
+    "lodash": "^4.17.15",
+    "p5": "^1.0.0"
+  }
+}
