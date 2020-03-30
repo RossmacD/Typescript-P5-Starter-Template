@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
     export: './src/js/main.ts'
   },
-
   devtool: 'inline-source-map',
   module: {
     rules: [
-      {
-        test: /\.html$/i,
-        loader: 'html-loader'
-      },
+      // {
+      //   test: /\.html$/i,
+      //   loader: 'html-loader'
+      // },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -26,11 +26,14 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.html', '.css']
+    extensions: ['.tsx', '.ts', '.js', '.css']
   },
   plugins: [
+    // Webpack plugin for clean up on rebuids
     new CleanWebpackPlugin(),
+    // Set a HTML template to be generated with scripts imported
     new HtmlWebpackPlugin({
+      inject: true,
       template: './src/index.html'
     })
   ],
