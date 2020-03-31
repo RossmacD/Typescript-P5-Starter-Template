@@ -1,14 +1,14 @@
+import * as p5 from'p5';
 export default abstract class Human{
     // Static Variables: Shared between all instaces of the class
     static radiusMinMax:p5.Vector;
-
     /* Physical*/
     id:number;
     position:p5.Vector;
-    velocity:p5.Vector = createVector(random(-2, 2), random(-2, 2));
-    radius:number =random(Human.radiusMinMax.x, Human.radiusMinMax.y);
+    // velocity:p5.Vector = createVector(random(-2, 2), random(-2, 2));
+    // radius:number =random(Human.radiusMinMax.x, Human.radiusMinMax.y);
 
-    constructor( _id :number, _position :p5.Vector){
+    constructor(p:p5, _id :number, _position :p5.Vector){
         this.id=_id;
         this.position=_position;
         

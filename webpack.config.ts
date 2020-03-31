@@ -1,5 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -10,10 +11,11 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-      // {
-      //   test: /\.html$/i,
-      //   loader: 'html-loader'
-      // },
+      {
+        test: /\.html$/i,
+        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
+        exclude: /node_modules/
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -21,7 +23,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        exclude: /node_modules/
       }
     ]
   },
@@ -32,11 +35,18 @@ module.exports = {
     // Webpack plugin for clean up on rebuids
     new CleanWebpackPlugin(),
     // Set a HTML template to be generated with scripts imported
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: './src/index.html'
+    // new HtmlWebpackPlugin({
+    //   inject: true,
+    //   template: './src/index.html'
+    // })
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css'
     })
   ],
+  externals: {
+    p5: 'p5'
+  },
   output: {
     path: __dirname + '/dist',
     filename: './js/main.bundle.js'
