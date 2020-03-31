@@ -2,7 +2,7 @@
   "name": "coronavirussim",
   "version": "1.0.0",
   "description": "A covid19 simultaion uilt in typescript",
-  "main": "index.js",
+  "main": "./dist/index.html",
   "scripts": {
     "serve": "npm run build",
     "build": "webpack",
