@@ -1,5 +1,5 @@
 // Import CSS for webpack - DOsnt work?
-import '../css/myStyle.css';
+import '../css/style.css';
 import '../index.html';
 
 //import sketch

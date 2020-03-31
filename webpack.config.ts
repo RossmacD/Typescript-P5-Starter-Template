@@ -12,11 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
-        exclude: /node_modules/
-      },
-      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
@@ -24,6 +19,21 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/i,
+        use: [
+          'file-loader?name=[name].[ext]',
+          'extract-loader',
+          {
+            loader: 'html-loader',
+            options: {
+              attributes: false,
+              minimize: false
+            }
+          }
+        ],
         exclude: /node_modules/
       }
     ]
@@ -40,7 +50,7 @@ module.exports = {
     //   template: './src/index.html'
     // })
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: 'css/style.css',
       chunkFilename: 'css/[id].css'
     })
   ],
@@ -49,6 +59,6 @@ module.exports = {
   },
   output: {
     path: __dirname + '/dist',
-    filename: './js/main.bundle.js'
+    filename: './js/main.js'
   }
 };
