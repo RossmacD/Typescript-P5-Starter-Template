@@ -21,8 +21,8 @@ export default class PerlinBrush {
     this.py = this.y;
     this.x = p.map(p.noise(this.tx), 0, 1, 0, p.width);
     this.y = p.map(p.noise(this.ty), 0, 1, 0, p.height);
-    this.tx += 0.01;
-    this.ty += 0.03;
+    this.tx += 0.015;
+    this.ty += 0.02;
   }
 
   display(p:p5) {

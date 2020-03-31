@@ -4,7 +4,7 @@
   "description": "A covid19 simultaion built in typescript",
   "main": "./dist/index.html",
   "scripts": {
-    "serve": "npm run build",
+    "start": "npm run watch",
     "build": "webpack",
     "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
