@@ -15,5 +15,5 @@
     "types": ["p5"],
     "typeRoots": ["node_modules/@types"],
   },
-  "exclude": ["./webpack.config.js","./dist", "node_modules", "**/node_modules/*","./zoldfiles"]
+  "exclude": ["./webpack.config.js","./dist", "node_modules", "**/node_modules/*"]
 }
