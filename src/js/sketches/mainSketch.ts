@@ -12,7 +12,8 @@ const sketch = (p: p5) => {
    * P5 Setup
    */
   p.setup = () => {
-    p.createCanvas(710, 710);
+    const canvasSize=p.windowHeight<p.windowWidth?p.windowHeight:p.windowWidth;
+    p.createCanvas(canvasSize,canvasSize);
     p.angleMode(p.DEGREES);
     p.background(0);
     brush = new PerlinBrush(p);
