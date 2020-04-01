@@ -1,7 +1,7 @@
 {
-  "name": "coronavirussim",
+  "name": "p5typescriptstarter",
   "version": "1.0.0",
-  "description": "A covid19 simultaion built in typescript",
+  "description": "A linted typescript project using the p5.js library and bundled with webpack",
   "main": "./dist/index.html",
   "scripts": {
     "start": "npm run watch",
@@ -16,9 +16,9 @@
   "author": "Ross MacDonald, N00171147",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RossmacD/CoronavirusSim/issues"
+    "url": "https://github.com/RossmacD/Typescript-P5-Starter-Template/issues"
   },
-  "homepage": "https://github.com/RossmacD/CoronavirusSim#readme",
+  "homepage": "https://github.com/RossmacD/Typescript-P5-Starter-Template",
   "devDependencies": {
     "@types/node": "13.9.8",
     "@types/p5": "^0.9.0",
