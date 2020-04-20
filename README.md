@@ -28,7 +28,3 @@ npm run build
 ```
 - This will build all your code using webpack and generate your website in the dist folder combining all your js and css into one file
 
-## Contributing
-If you have any ideas, input or questions, create an issue!
-
-If you would like to add a feature or optimisation create a pull request!😎
